@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CreativeTim.Argon.DotNetCore.Free.Models.Search
 {
-    public class CustomerSearchModel
+    public class CustomerSearchModel:BaseSearchModel
     {
         #region Ctor
 

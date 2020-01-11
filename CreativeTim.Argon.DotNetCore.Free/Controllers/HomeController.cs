@@ -14,7 +14,7 @@ using Service.Catalog;
 namespace CreativeTim.Argon.DotNetCore.Free.Controllers
 {
 
-    public class HomeController : BaseController
+    public class HomeController : Controller
     {
         private readonly IUserService _userService;
         public  HomeController(IUserService userService)
@@ -22,23 +22,28 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
            this._userService= userService;
         }
 
-        [HttpGet("/")]
+      //  [HttpGet("/")]
         public IActionResult Index()
         {
-           
+            ViewBag.Language ="vi-VN";
+
             return View();
         }
 
-        [HttpGet("/icons")]
+     //   [HttpGet("/icons")]
         public IActionResult Icons()
         {
-            return View();
+            return PartialView();
+        }
+        public IActionResult Home()
+        {
+            return PartialView();
         }
 
         [HttpGet("/maps")]
         public IActionResult Maps()
         {
-            return View();
+            return PartialView();
         }
 
  
@@ -55,10 +60,10 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
             return View();
         }
 
-        [HttpGet("/tables")]
+      //  [HttpGet("/tables")]
         public IActionResult Tables()
         {
-            return View();
+            return PartialView();
         }
 
         [HttpGet("/privacy")]

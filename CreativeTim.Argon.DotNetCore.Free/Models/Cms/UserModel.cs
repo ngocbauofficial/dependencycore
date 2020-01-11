@@ -6,7 +6,7 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
     using System.ComponentModel.DataAnnotations.Schema;
 
 
-    public partial class UserModel : BaseModelEntity
+    public partial class UserModel : BaseModelEntity 
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserModel()
@@ -20,6 +20,9 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
 
         [StringLength(1000)]
         public string Username { get; set; }
+
+        [StringLength(1000)]
+        public string Name { get; set; }
 
         [StringLength(1000)]
         public string Email { get; set; }
@@ -64,5 +67,7 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
         public virtual ICollection<PurchaseModel> Purchases { get; set; }
 
         public virtual RoleModel Role { get; set; }
+
+     
     }
 }

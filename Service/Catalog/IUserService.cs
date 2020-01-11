@@ -9,6 +9,7 @@ namespace Service.Catalog
     public partial interface IUserService
     {
         IPagedList<User> GetAll(int pageIndex = 0, int pageSize = int.MaxValue, bool getOnlyTotalCount = false);
+        IEnumerable<User> GetAllTest();
         User GetByUserName(string username);
         User GetById(int Id);
         void Insert(User user);

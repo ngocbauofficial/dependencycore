@@ -14,13 +14,12 @@ namespace Domain.Models
         {
             Purchases = new HashSet<Purchase>();
         }
-
-  
-
         public Guid Guid { get; set; }
 
         [StringLength(1000)]
         public string Username { get; set; }
+        [StringLength(1000)]
+        public string Name { get; set; }
 
         [StringLength(1000)]
         public string Email { get; set; }

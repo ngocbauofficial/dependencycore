@@ -22,6 +22,14 @@ namespace Service.Catalog
            var users = new PagedList<User>(query, pageIndex, pageSize, getOnlyTotalCount);
             return users;
         }
+    
+        public virtual IEnumerable<User> GetAllTest()
+        {
+            var query = _userReponsitory.Table;
+            query = query.OrderByDescending(x => x.CreatedOn);
+         var list=   query.ToList();
+            return list;
+        }
         public virtual User GetByUserName(string username)
         {
             var query = from a in _userReponsitory.Table where a.Username == username select a;

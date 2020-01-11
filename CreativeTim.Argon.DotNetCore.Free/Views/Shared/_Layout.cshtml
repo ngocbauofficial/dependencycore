@@ -1,28 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <partial name="_PageHeadElement"/>
-    
+    <base href="/">
+    <partial name="_PageHeadElement" />
+    <partial name="_ThemeScripts" />
     @RenderSection("Styles", required: false)
     @RenderSection("HeadScripts", required: false)
+
+
 </head>
-<body>
-    <partial name="_GoogleTagManagerBodyElement" />
-
-    <partial name="_Sidebar"/>
-    <div class="main-content">
-        <partial name="_Navbar"/>
-        <partial name="_Header"/>
-        <!-- Page content -->
-        <div class="container-fluid mt--7">
+<body ng-app="myApp">
+  
+    <div class="site-wrap">
+        <partial name="_GoogleTagManagerBodyElement" />
+        <partial name="_Navbar" />
+        <main>
+            <partial name="_Header" />
             <!-- Page content -->
-            @RenderBody()
-            <partial name="_Footer" />
-        </div>
-    </div>
- 
-    <partial name="_ThemeScripts" />
+            <!-- Page content -->
+            <div>
 
-    @RenderSection("Scripts", required: false)
+                <div class="content-columns" ng-view>
+                    @RenderBody()
+                 </div>
+                </div>
+        </main>
+        <partial name="_Footer" />
+        </div>
+        @RenderSection("Scripts", required: false)
 </body>
 </html>

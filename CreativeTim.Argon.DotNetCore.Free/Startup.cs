@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Domain;
 using Data;
 using Service.Catalog;
+using Newtonsoft.Json.Serialization;
 
 namespace CreativeTim.Argon.DotNetCore.Free
 {
@@ -37,7 +38,8 @@ namespace CreativeTim.Argon.DotNetCore.Free
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddMvc()
+           .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("LocalDbConnection")));
             services.AddScoped<IDbContext, DataContext>();
@@ -70,6 +72,9 @@ namespace CreativeTim.Argon.DotNetCore.Free
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                   name: "customer",
+                   template: "{controller=Customer}/{action=Index}/{id?}");
             });
         }
     }
