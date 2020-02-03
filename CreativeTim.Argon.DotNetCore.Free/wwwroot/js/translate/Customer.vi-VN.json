@@ -1,0 +1,26 @@
+{
+  "Customer": {
+    "TitleList": "Danh sách khách hàng",
+    "TitleEdit": "Chỉnh sửa khách hàng",
+    "TitleAdd": "Thêm khách hàng",
+    "Id": "Id",
+    "Name": "Tên",
+    "Phone": "Số điện thoại",
+    "Email": "Email",
+    "Username": "Tài khoản",
+    "Gender": "Giới tính",
+    "Address": "Địa chỉ",
+    "Address1": "Địa chỉ công ty",
+    "Company": "Công ty",
+    "TaxNumber": "Mã số thuế",
+    "Active": "Trạng thái",
+    "Password": "Mật Khẩu",
+    "CreatedOn": "Ngày tạo",
+    "Avatar": "Hình đại diện",
+    "TitleMessage": "Thông báo",
+    "AddSuccess": "Thêm Khách Hàng Thành Công",
+    "AddFailed": "Thêm Khách Hàng Thất Bại",
+    "EditSuccess": "Chỉnh sửa khách hàng thành công",
+    "EditFailed": "Chỉnh sửa khách  hàng thất bại"
+  }
+}

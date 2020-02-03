@@ -16,6 +16,7 @@ using Domain;
 using Data;
 using Service.Catalog;
 using Newtonsoft.Json.Serialization;
+using AutoMapper;
 
 namespace CreativeTim.Argon.DotNetCore.Free
 {
@@ -45,8 +46,12 @@ namespace CreativeTim.Argon.DotNetCore.Free
             services.AddScoped<IDbContext, DataContext>();
              services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IUserService, UserService>();
-
+            services.AddScoped<IAccountService, AccountService>();
             // services.AddScoped<IGameRepository, GameRepository>();
+            //automaper
+
+            services.AddAutoMapper(typeof(Startup));
+  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,12 +74,10 @@ namespace CreativeTim.Argon.DotNetCore.Free
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-                routes.MapRoute(
-                   name: "customer",
-                   template: "{controller=Customer}/{action=Index}/{id?}");
+    
+                routes.MapSpaFallbackRoute(
+                 name: "spa-fallback",
+                 defaults: new { controller = "Home", action = "Index" });
             });
         }
     }

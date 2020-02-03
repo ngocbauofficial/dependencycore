@@ -27,8 +27,22 @@ namespace Domain.Models
         [StringLength(1000)]
         public string Phone { get; set; }
 
+        public bool? Gender { get; set; }
+
         [StringLength(1000)]
         public string Address { get; set; }
+
+
+        [StringLength(1000)]
+        public string Address1 { get; set; }
+
+
+        [StringLength(1000)]
+        public string Company { get; set; }
+
+
+        [StringLength(1000)]
+        public string TaxNumber { get; set; }
 
         [StringLength(1000)]
         public string LastIp { get; set; }

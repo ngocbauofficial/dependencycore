@@ -1,0 +1,26 @@
+{
+  "Customer": {
+    "TitleList": "List Customer",
+    "TitleEdit": "Edit Customer",
+    "TitleAdd": "Add Customer",
+    "Id": "Id",
+    "Name": "Name",
+    "Phone": "Phone",
+    "Email": "Email",
+    "Username": "UserName",
+    "Gender": "Gender",
+    "Address": "Address",
+    "Address1": "Address Company",
+    "Company": "Company",
+    "TaxNumber": "Tax Number",
+    "Active": "Status",
+    "Password": "Password",
+    "CreatedOn": "CreatedOn",
+    "Avatar": "Avatar",
+    "TitleMessage": "Notification",
+    "AddSuccess": "Add Succcess Customer",
+    "AddFailed": "Add Failed Customer",
+    "EditSuccess": "Edit Succcess Customer",
+    "EditFailed": "Edit Failed Customer"
+  }
+}

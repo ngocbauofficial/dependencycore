@@ -1,9 +1,17 @@
 ﻿
-
-<div class="data-display w-100">
-    <div class="w-100">
-        <div>
-            <table id="entry-grid" datatable="" dt-options="dtOptions" dt-columns="dtColumns" class="w-100 table-sm dataTable no-footer"></table>
-        </div>
-    </div>
-</div>
+<a href="/Customer/Add" class="btn btn-primary">
+    <i class="entypo-plus"></i>
+    Add Row
+</a>
+<table class="table table-bordered table-striped datatable" id="entry-grid" datatable="" dt-options="dtOptions" dt-columns="dtColumns">
+    <thead>
+        <tr>
+            <th>{{"Customer.Id" | translate}}</th>
+            <th>{{"Customer.Name" | translate}}</th>
+            <th>{{"Customer.Phone" | translate}}</th>
+            <th>{{"Customer.Email" | translate}}</th>
+            <th>{{"Button.Edit" | translate}}</th>
+            <th>{{"Button.Delete" | translate}}</th>
+        </tr>
+    </thead>
+</table>

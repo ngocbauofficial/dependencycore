@@ -13,11 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{E6909E40-B135-4D1B-BF9C-498E9BD5598E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{E6909E40-B135-4D1B-BF9C-498E9BD5598E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{57D92FD0-35EC-4134-80DA-B3343709C003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{57D92FD0-35EC-4134-80DA-B3343709C003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{274D2EC0-7939-4226-9406-647E92D4F0D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{274D2EC0-7939-4226-9406-647E92D4F0D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameWork", "FrameWork\FrameWork.csproj", "{1F01C975-74DA-45AE-98F6-A3C5499004F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{274D2EC0-7939-4226-9406-647E92D4F0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{274D2EC0-7939-4226-9406-647E92D4F0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{274D2EC0-7939-4226-9406-647E92D4F0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F01C975-74DA-45AE-98F6-A3C5499004F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F01C975-74DA-45AE-98F6-A3C5499004F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F01C975-74DA-45AE-98F6-A3C5499004F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F01C975-74DA-45AE-98F6-A3C5499004F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
