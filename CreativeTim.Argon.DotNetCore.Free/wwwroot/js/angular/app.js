@@ -1,10 +1,9 @@
-var app = angular.module('myApp', ["ngRoute", "datatables","oc.lazyLoad", "ngCookies", "pascalprecht.translate"]);
+var app = angular.module('myApp', ["ngRoute", "datatables", "oc.lazyLoad", "ngCookies", "pascalprecht.translate"]);
 
 
 app.config(['$translateProvider',
   function ($translateProvider) {
     var language = (window.navigator.userLanguage || window.navigator.language).toLowerCase();
-    console.log(language);
     $translateProvider.registerAvailableLanguageKeys(['vi-VN', 'en-US'], {
       'en-US': 'en-US',
       'vi-VN': 'vi-VN',
@@ -13,12 +12,21 @@ app.config(['$translateProvider',
     });
 
     $translateProvider.useStaticFilesLoader({
-      prefix: 'js/translate/Menu.',
-      suffix: '.json'
+      files: [{
+        prefix: 'js/translate/Menu.',
+        suffix: '.json'
+      },
+      {
+        prefix: 'js/translate/Button.',
+        suffix: '.json'
+      },
+      {
+        prefix: 'js/translate/Customer.',
+        suffix: '.json'
+      }]
     });
 
-
-    $translateProvider.preferredLanguage('vi-VN');
+    $translateProvider.preferredLanguage('vi-VN'); // default
     // $translateProvider.use('de');
     $translateProvider.useCookieStorage();
     $translateProvider.fallbackLanguage("en-US");

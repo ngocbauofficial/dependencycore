@@ -22,7 +22,7 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
            this._userService= userService;
         }
 
-      //  [HttpGet("/")]
+    
         public IActionResult Index()
         {
             ViewBag.Language ="vi-VN";
@@ -30,47 +30,14 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
             return View();
         }
 
-     //   [HttpGet("/icons")]
-        public IActionResult Icons()
-        {
-            return PartialView();
-        }
+    
+        [HttpGet("/Home/Home")]
         public IActionResult Home()
         {
             return PartialView();
         }
 
-        [HttpGet("/maps")]
-        public IActionResult Maps()
-        {
-            return PartialView();
-        }
-
- 
-        [HttpGet("/profile")]
-        public IActionResult Profile()
-        {
-     
-            return View();
-        }
-
-
-        [HttpPost("/profile")]
-        public  IActionResult UpdateProfile() { 
-            return View();
-        }
-
-      //  [HttpGet("/tables")]
-        public IActionResult Tables()
-        {
-            return PartialView();
-        }
-
-        [HttpGet("/privacy")]
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+       
 
         [HttpGet("/error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

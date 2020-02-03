@@ -8,11 +8,6 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
 
     public partial class UserModel : BaseModelEntity 
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserModel()
-        {
-            Purchases = new HashSet<PurchaseModel>();
-        }
 
   
 
@@ -29,9 +24,21 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
 
         [StringLength(1000)]
         public string Phone { get; set; }
+        public bool? Gender { get; set; }
 
         [StringLength(1000)]
         public string Address { get; set; }
+
+        [StringLength(1000)]
+        public string Address1 { get; set; }
+
+
+        [StringLength(1000)]
+        public string Company { get; set; }
+
+
+        [StringLength(1000)]
+        public string TaxNumber { get; set; }
 
         [StringLength(1000)]
         public string LastIp { get; set; }
@@ -63,10 +70,6 @@ namespace CreativeTim.Argon.DotNetCore.Free.Models.Cms
         [StringLength(1000)]
         public string Avatar { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseModel> Purchases { get; set; }
-
-        public virtual RoleModel Role { get; set; }
 
      
     }

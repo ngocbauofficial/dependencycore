@@ -9,24 +9,32 @@
 
 
 </head>
-<body ng-app="myApp">
+<body class="page-body" ng-app="myApp" ng-cloak>
   
-    <div class="site-wrap">
-        <partial name="_GoogleTagManagerBodyElement" />
-        <partial name="_Navbar" />
-        <main>
-            <partial name="_Header" />
-            <!-- Page content -->
-            <!-- Page content -->
-            <div>
+    <div class="page-container">
+        <!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 
-                <div class="content-columns" ng-view>
-                    @RenderBody()
-                 </div>
-                </div>
-        </main>
-        <partial name="_Footer" />
+        <div class="sidebar-menu">
+
+            <partial name="_GoogleTagManagerBodyElement" />
+            <partial name="_Header" />
+            <partial name="_Navbar" />
         </div>
+        <div class="main-content">
+            <partial name="_NavbarUserInfo" />
+            <div class="row">
+                <div class="col-md-12" ng-view>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <!-- Page content -->
+
+
+    
+        <partial name="_Footer" />
+    </div>
         @RenderSection("Scripts", required: false)
 </body>
 </html>

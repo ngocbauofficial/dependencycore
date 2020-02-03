@@ -12,25 +12,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         }]
       },
     })
-    .when('/Icons', {
-      title: 'Icon',
-      templateUrl:'/Home/Icons',
-      controller: 'iconsController',
-      resolve: {
-        LazyLoadCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-          return $ocLazyLoad.load('home'); // Resolve promise and load before view 
-        }]
-      },
-    })
-    .when('/Tables', {
-      templateUrl: '/Home/Tables',
-      controller: 'tablesController',
-      resolve: {
-        LazyLoadCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-          return $ocLazyLoad.load('home'); // Resolve promise and load before view 
-        }]
-      },
-    })
+
     .when('/Customer', {
       title: 'Customer',
       templateUrl: '/Customer/List',
@@ -43,9 +25,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
      
     })
     .when('/Customer/Edit/:id', {
-
+      disableCache: true,
       templateUrl: function (params) {
-        return '/Customer/Edit/' + params.id;
+        return '/Customer/GetEdit/' + params.id +"?"+ $.now();
       },
       controller: 'customerController',
       resolve: {
@@ -54,6 +36,17 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         }]
       }
     })
+    .when('/Customer/Add', {
+      title: 'Customer',
+      templateUrl: '/Customer/GetAdd',
+      controller: 'customerController',
+      resolve: {
+        LazyLoadCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+          return $ocLazyLoad.load('customer'); // Resolve promise and load before view 
+        }]
+      }
+    })
+
     .otherwise({
       redirectTo: '/'
     });
@@ -61,9 +54,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
   $locationProvider.html5Mode(true);
 }]);
 
-app.run(['$rootScope', function ($rootScope) {
-  $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-    $rootScope.title = current.$$route.title;
+app.run(['$rootScope', '$route', function ($rootScope, $route) {
+  $rootScope.$on('$routeChangeSuccess', function () {
+    document.title = $route.current.title + " | PTB";
   });
 }]);
 
