@@ -1,5 +1,11 @@
 ﻿@model UserModel
 @using CreativeTim.Argon.DotNetCore.Free.Models.Cms
+@{
+    ViewData["Title"] = "Customer Add";
+}
+@section HeadScripts{
+    <script src="~/js/angular/customerController.js" asp-append-version="true"></script>
+}
 <div class="panel panel-primary" data-collapsed="0">
 
     <div class="panel-heading">

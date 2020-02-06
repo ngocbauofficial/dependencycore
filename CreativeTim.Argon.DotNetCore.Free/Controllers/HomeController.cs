@@ -34,7 +34,7 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
         [HttpGet("/Home/Home")]
         public IActionResult Home()
         {
-            return PartialView();
+            return View();
         }
 
        

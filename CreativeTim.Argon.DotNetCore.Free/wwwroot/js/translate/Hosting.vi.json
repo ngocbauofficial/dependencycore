@@ -1,0 +1,19 @@
+{
+  "Hosting": {
+    "TitleList": "Danh Sách Hosting",
+    "TitleEdit": "Sửa Hosting",
+    "TitleAdd": "Thêm Hosting",
+    "Id": "Id",
+    "HostingIp": "Hosting IP",
+    "HostingName": "Hosting Name",
+    "LinkLogin": "Link Login",
+    "UserName": "Tài Khoản",
+    "Password": "Mật khẩu",
+    "Vendor": "Cửa hàng",
+    "TitleMessage": "Notification",
+    "AddSuccess": "Add Succcess Hosting",
+    "AddFailed": "Add Failed Hosting",
+    "EditSuccess": "Edit Succcess Hosting",
+    "EditFailed": "Edit Failed Hosting"
+  }
+}

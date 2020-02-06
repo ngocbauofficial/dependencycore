@@ -13,10 +13,10 @@ namespace Domain.Models
 
         public string Name { get; set; }
 
-        [StringLength(1000)]
+
         public string SystemName { get; set; }
 
-        [StringLength(1000)]
+ 
         public string Category { get; set; }
 
         public virtual Role Role { get; set; }

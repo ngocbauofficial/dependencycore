@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ngRoute", "datatables", "oc.lazyLoad", "ngCookies", "pascalprecht.translate"]);
+var app = angular.module('myApp', [ "datatables", "ngCookies", "pascalprecht.translate"]);
 
 
 app.config(['$translateProvider',
@@ -41,17 +41,17 @@ app.controller('translate', ['$scope', '$translate',
     };
   }
 ]);
-app.config(["$ocLazyLoadProvider", function ($ocLazyLoadProvider) {
-  $ocLazyLoadProvider.config({
+//app.config(["$ocLazyLoadProvider", function ($ocLazyLoadProvider) {
+//  $ocLazyLoadProvider.config({
    
-    'modules': [{ // Set modules initially
-      name: 'home', // State1 module
-      files: ['js/angular/rootController.js']
-    },
-      {
-      name: 'customer', // State2 module
-        files: ['js/angular/customerController.js']
-      }
-    ]
-  });
-}]);
+//    'modules': [{ // Set modules initially
+//      name: 'home', // State1 module
+//      files: ['js/angular/rootController.js']
+//    },
+//      {
+//      name: 'customer', // State2 module
+//        files: ['js/angular/customerController.js']
+//      }
+//    ]
+//  });
+//}]);

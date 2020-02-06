@@ -47,7 +47,8 @@ namespace CreativeTim.Argon.DotNetCore.Free
              services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAccountService, AccountService>();
-            // services.AddScoped<IGameRepository, GameRepository>();
+            services.AddScoped<IHostingService, HostingService>();
+            services.AddScoped<ICalendarService, CalendarService>();
             //automaper
 
             services.AddAutoMapper(typeof(Startup));
@@ -71,13 +72,11 @@ namespace CreativeTim.Argon.DotNetCore.Free
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
-    
-                routes.MapSpaFallbackRoute(
-                 name: "spa-fallback",
-                 defaults: new { controller = "Home", action = "Index" });
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=home}/{action=index}/{id?}");
             });
         }
     }

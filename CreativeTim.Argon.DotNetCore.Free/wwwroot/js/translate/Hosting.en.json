@@ -1,0 +1,19 @@
+{
+  "Hosting": {
+    "TitleList": "List Hosting",
+    "TitleEdit": "Edit Hosting",
+    "TitleAdd": "Add Hosting",
+    "Id": "Id",
+    "HostingIp": "HostingIp",
+    "HostingName": "HostingName",
+    "LinkLogin": "LinkLogin",
+    "UserName": "UserName",
+    "Password": "Password",
+    "Vendor": "Vendor",
+    "TitleMessage": "Notification",
+    "AddSuccess": "Add Succcess Hosting",
+    "AddFailed": "Add Failed Hosting",
+    "EditSuccess": "Edit Succcess Hosting",
+    "EditFailed": "Edit Failed Hosting"
+  }
+}

@@ -26,14 +26,14 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
         [HttpGet("/Customer/List")]
         public IActionResult List()
         {
-            return PartialView();
+            return View();
         }
-        [HttpGet("/Customer/GetEdit/{id}")]
+        [HttpGet("/Customer/Edit/{id}")]
         public IActionResult Edit(int id)
         {
             var entity = _userService.GetById(id);
             var model = _mapper.Map<UserModel>(entity);
-            return PartialView(model);
+            return View(model);
         }
         [HttpPost("/Customer/List")]
         public JsonResult List(CustomerSearchModel searchModel)
@@ -69,11 +69,11 @@ namespace CreativeTim.Argon.DotNetCore.Free.Controllers
                  }
                 return Json(0);
         }
-        [HttpGet("/Customer/GetAdd")]
+        [HttpGet("/Customer/Add")]
         public IActionResult Add()
         {
             var model = new UserModel();
-            return PartialView(model);
+            return View(model);
         }
 
         [HttpPost("/Customer/Add")]

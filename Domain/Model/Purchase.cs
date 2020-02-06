@@ -13,7 +13,7 @@ namespace Domain.Models
 
         public int CustomerId { get; set; }
 
-        [StringLength(1000)]
+
         public string DomainName { get; set; }
 
         public int? HostingId { get; set; }

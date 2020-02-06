@@ -36,7 +36,7 @@ angular.module('myApp').service("customerService", function ($http) {
   }
 })
 
-angular.module('myApp').controller('customerController', ['$scope', '$http', 'DTOptionsBuilder', 'DTColumnBuilder', '$translate', 'customerService','$location',
+angular.module('myApp').controller('myCtrl', ['$scope', '$http', 'DTOptionsBuilder', 'DTColumnBuilder', '$translate', 'customerService','$location',
   function ($scope, $http, DTOptionsBuilder, DTColumnBuilder, $translate, customerService, $location) {
 
     $scope.dtColumns = [

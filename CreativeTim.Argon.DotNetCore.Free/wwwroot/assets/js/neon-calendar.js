@@ -52,7 +52,6 @@ var neonCalendar = neonCalendar || {};
 						left: 'title',
 						right: 'month,agendaWeek,agendaDay today prev,next'
 					},
-					
 					//defaultView: 'basicWeek',
 					
 					editable: true,
